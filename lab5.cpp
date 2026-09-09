@@ -4,9 +4,9 @@ using namespace std;
 
 int main() {
 
-    int SIZE = 5;
-    int *lptr = nullptr;
-    lptr = new int[SIZE];
+    const int SIZE = 5;
+    double *arrayptr = nullptr;
+    arrayptr = new double[SIZE];
 
     return 0;
 }
