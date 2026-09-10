@@ -1,6 +1,9 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
+
+void enterArrayData(*double, int);
 
 int main() {
 
@@ -8,7 +11,22 @@ int main() {
     double *arrayptr = nullptr;
     arrayptr = new double[SIZE];
 
+    enterArrayData(arrayptr, SIZE);
+    // testing code
+    for (int i = 0; i < SIZE; ++i) {
+        cout << arrayptr[i] << endl;
+    }
+
     return 0;
+}
+
+enterArrayData(*double array, int size) {
+    cout << "Data Entry for the Array:"
+    for (int i = 0; i < size; ++i) {
+        cout << setw(30) << "> Element #" << i << ": ";
+        cin >> array[i];
+    }
+    cout << "Data entry complete"
 }
 
 
