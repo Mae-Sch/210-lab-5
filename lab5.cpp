@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void enterArrayData(*double, int);
+void enterArrayData(double*, int);
 
 int main() {
 
@@ -20,13 +20,13 @@ int main() {
     return 0;
 }
 
-enterArrayData(*double array, int size) {
-    cout << "Data Entry for the Array:"
+void enterArrayData(double *array, int size) {
+    cout << "Data Entry for the Array:\n";
     for (int i = 0; i < size; ++i) {
-        cout << setw(30) << "> Element #" << i << ": ";
+        cout << setw(20) << "> Element #" << i << ": ";
         cin >> array[i];
     }
-    cout << "Data entry complete"
+    cout << "Data entry complete\n";
 }
 
 
