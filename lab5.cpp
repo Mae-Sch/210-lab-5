@@ -4,6 +4,7 @@
 using namespace std;
 
 void enterArrayData(double*, int);
+void outputArrayData(double*, int);
 
 int main() {
 
@@ -12,10 +13,7 @@ int main() {
     arrayptr = new double[SIZE];
 
     enterArrayData(arrayptr, SIZE);
-    // testing code
-    for (int i = 0; i < SIZE; ++i) {
-        cout << arrayptr[i] << endl;
-    }
+    outputArrayData(arrayptr, SIZE);
 
     return 0;
 }
@@ -29,4 +27,10 @@ void enterArrayData(double *array, int size) {
     cout << "Data entry complete\n";
 }
 
-
+void outputArrayData(double *array, int size) {
+    cout << "Outputting array elements: ";
+    for (int i = 0; i < size; ++i) {
+        cout << array[i] << " ";
+    }
+    cout << endl;
+}
